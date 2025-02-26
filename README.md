@@ -22,7 +22,7 @@ ALG786201 - Pensamento computacional e Algoritmos
 
 ## 1. Introdução
 
-<p align="justify"> &emsp; O projeto se refere à atividade avaliativa da disciplina de Pensamento computacional e Algoritmos.</p>
+<p align="justify"> &emsp; O projeto se refere à atividade avaliativa da disciplina de Pensamento Computacional e Algoritmos.</p>
 <p align="justify"> &emsp; Foi desenvolvido um jogo na linguagem de programação Java, utilizando os conceitos de Algoritmo, Programação Orientada a Objetos e padrão de arquitetura MVC.</p>
 
 ### Técnologias utilizadas+
@@ -38,7 +38,7 @@ ALG786201 - Pensamento computacional e Algoritmos
 
 ## 3. Descrição das atividades
 
-<p align="justify"> &emsp; Foi desenvolvido um jogo simples de RPG Textual, onde o jogador controla um paladino que tem de enfrente um inimigo, o Robgoblin.</p>
+<p align="justify"> &emsp; Foi desenvolvido um jogo simples de RPG Textual, onde o jogador controla um paladino que tem de enfrentar um inimigo, o Robgoblin.</p>
 <p align="justify"> &emsp; RPG refere-se a Role Playing Game, onde o jogador assume o papel de algum personagem fictício, geralmente de sua altoria, onde deve passar por diversos desafios propostos pelo Mestre da Mesa, neste caso os desafios foram scriptados em Java.</p>
 <p align="justify"> &emsp; O desafio proposto é uma batalha contra um inimigo, para atacar basta digitar 'atacar' e serão feitos cálculos com base em um sistema pré-definido de rolagens de dados e habilidades pré-definidas dos personagens (inimigo ou personagem jogável).</p>
 
