@@ -1,7 +1,9 @@
 package Utils;
 
+// Essa classe é responsável por prover os modificadores das habilidades
 public class Modifiers {
 
+    // Retorna qual o modificador com base no nível da habilidade chave
     public static int GetModifier(int skill) {
         switch (skill) {
             case 1:
