@@ -3,12 +3,14 @@ package Model;
 public class Enemy {
     private String name;
     private int health;
-    private int attack;
+    private int armorClass;
+    private int attackBonus;
 
-    public Enemy(String name, int health, int attack) {
+    public Enemy(String name, int health, int armorClass, int attackBonus) {
         this.name = name;
         this.health = health;
-        this.attack = attack;
+        this.armorClass = armorClass;
+        this.attackBonus = attackBonus;
     }
 
     // Getters e Setters
@@ -20,8 +22,16 @@ public class Enemy {
         return health;
     }
 
-    public int getAttack() {
-        return attack;
+    public int getArmorClass() {
+        return armorClass;
+    }
+
+    public int getAttackBonus() {
+        return attackBonus;
+    }
+
+    public int attack() {
+        return Utils.DiceRoller.rollDice(1, 8) + 4;
     }
 
     public void takeDamage(int damage) {

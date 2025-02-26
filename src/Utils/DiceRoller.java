@@ -11,6 +11,9 @@ public class DiceRoller {
         for (int i = 0; i < numberOfDice; i++) {
             // Gera um número aleatório entre 1 e numberOfFaces
             int roll = random.nextInt(numberOfFaces) + 1;
+            if (numberOfDice == 1 && numberOfFaces == 20 && roll == 20) {
+                return 999;
+            }
             total += roll;
         }
         return total;

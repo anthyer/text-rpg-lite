@@ -13,8 +13,8 @@ public class GameController {
     }
 
     public void startGame() {
-        gameView.showMessage("Welcome to Text RPG Lite!");
-        gameView.showMessage("Type 'attack' to fight the enemy or 'quit' to exit.");
+        gameView.showMessage("\n" + gameState.getPlayer().getName() + " se depara com um " + gameState.getCurrentEnemy().getName() + " em seu caminho, e por mais que tente, não consegue evitar a batalha.");
+        gameView.showMessage("\nEscreva 'atacar' para enfrentar o inimigo ou 'sair' para finalizar.");
 
         while (true) {
             gameView.showCharacterStatus(
@@ -26,23 +26,24 @@ public class GameController {
                     gameState.getCurrentEnemy().getHealth()
             );
 
+            gameView.showMessage("Escreva sua ação:");
             String input = gameView.getInput();
 
-            if ("attack".equalsIgnoreCase(input)) {
+            if ("atacar".equalsIgnoreCase(input)) {
                 gameState.attackEnemy();
                 if (!gameState.getCurrentEnemy().isAlive()) {
-                    gameView.showMessage("You defeated the enemy!");
+                    gameView.showMessage("\nVocê derrotou o inimigo, parabéns!\n\nObrigado por jogar!");
                     break;
                 }
                 if (!gameState.getPlayer().isAlive()) {
-                    gameView.showMessage("You were defeated... Game Over!");
+                    gameView.showMessage("\nVocê foi derrotado... Fim de jogo!");
                     break;
                 }
-            } else if ("quit".equalsIgnoreCase(input)) {
-                gameView.showMessage("Thanks for playing!");
+            } else if ("sair".equalsIgnoreCase(input)) {
+                gameView.showMessage("\nObrigado por jogar!");
                 break;
             } else {
-                gameView.showMessage("Invalid command. Try 'attack' or 'quit'.");
+                gameView.showMessage("\nComando inválido. Tente 'atacar' ou 'sair'.");
             }
         }
     }

@@ -1,29 +1,29 @@
 package Model;
 
-import Utils.DiceRoller;
-
 public class Paladin {
     private String name;
     private int health;
-    private int attack;
+    private int armorClass;
     private int strength;
     private int dexterity;
     private int constitution;
     private int intelligence;
     private int wisdom;
     private int charisma;
+    private int attackBonus;
 
 
-    public Paladin(String name, int health, int attack, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Paladin(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.strength = strength;
+        this.strength = strength + 2;
         this.dexterity = dexterity;
-        this.constitution = constitution;
+        this.constitution = constitution + 2;
         this.intelligence = intelligence;
         this.wisdom = wisdom;
         this.charisma = charisma;
+        this.health = 20 + Utils.Modifiers.GetModifier(this.constitution);
+        this.armorClass = 10 + Utils.Modifiers.GetModifier(this.dexterity) + 6;
+        this.attackBonus = 2;
     }
 
     // Getters e Setters
@@ -35,32 +35,24 @@ public class Paladin {
         return health;
     }
 
-    public int getAttack() {
-        return attack;
-    }
+    public int getStrength() { return strength; }
 
-    public int getStrength() {
-        return strength;
-    }
+    public int getDexterity() { return dexterity; }
 
-    public int getDexterity() {
-        return dexterity;
-    }
+    public int getConstitution() { return constitution; }
 
-    public int getConstitution() {
-        return constitution;
-    }
+    public int getIntelligence() { return intelligence; }
 
-    public int getIntelligence() {
-        return intelligence;
-    }
+    public int getWisdom() { return wisdom; }
 
-    public int getWisdom() {
-        return wisdom;
-    }
+    public int getCharisma() { return charisma; }
 
-    public int getCharisma() {
-        return charisma;
+    public int getArmorClass() { return armorClass; }
+
+    public int getAttackBonus() { return attackBonus; }
+
+    public int attack() {
+        return Utils.DiceRoller.rollDice(1, 8) + Utils.Modifiers.GetModifier(this.strength);
     }
 
     public void takeDamage(int damage) {
@@ -72,12 +64,5 @@ public class Paladin {
 
     public boolean isAlive() {
         return health > 0;
-    }
-
-    public void attack(Enemy target) {
-        // Rola 2 dados de 6 faces para calcular o dano
-        int damage = DiceRoller.rollDice(2, 6);
-        target.takeDamage(damage);
-        System.out.println(name + " attacks for " + damage + " damage!");
     }
 }
