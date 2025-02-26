@@ -38,7 +38,7 @@ ALG786201 - Pensamento computacional e Algoritmos
 
 ## 3. Descrição das atividades
 
-<p align="justify"> &emsp; Foi desenvolvido um jogo simples de RPG Textual, onde o jogador controla um paladino que tem de enfrentar um inimigo, o Robgoblin.</p>
+<p align="justify"> &emsp; Foi desenvolvido um jogo simples de RPG Textual, onde o jogador controla um paladino que tem de enfrentar um inimigo, o Hobgoblin.</p>
 <p align="justify"> &emsp; RPG refere-se a Role Playing Game, onde o jogador assume o papel de algum personagem fictício, geralmente de sua altoria, onde deve passar por diversos desafios propostos pelo Mestre da Mesa, neste caso os desafios foram scriptados em Java.</p>
 <p align="justify"> &emsp; O desafio proposto é uma batalha contra um inimigo, para atacar basta digitar 'atacar' e serão feitos cálculos com base em um sistema pré-definido de rolagens de dados e habilidades pré-definidas dos personagens (inimigo ou personagem jogável).</p>
 
